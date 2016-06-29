@@ -20,7 +20,6 @@ function Runner(outerContainerId, opt_config) {
   this.outerContainerEl = document.querySelector(outerContainerId);
   this.containerEl = null;
   this.snackbarEl = null;
-  // this.detailsButton = this.outerContainerEl.querySelector('#details-button');
 
   this.config = opt_config || Runner.config;
 
