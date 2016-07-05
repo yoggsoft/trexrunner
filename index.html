@@ -3,16 +3,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="trex.js"></script>
+    <script type="text/javascript" src="Runner.js"></script>
     <title>T-Rex Runner</title>
   </head>
   <body>
     <script type="text/javascript">
-      var rnr = new Runner("runner-container");
+    var t = document.getElementById("runnerContainer");
+    console.log(t);
+      var rnr = new Runner(t);
     </script>
-    <div class="runner-container" style="width: 600px; height: 150px; top: 0px; left: 0px;">
-      <canvas class="runner-canvas" width="600" height="150" style="width: 600px; height: 150px;"></canvas>
-    </div>
+      <div id="runnerContainer" class="runner-container" style="width: 600px; height: 150px; top: 0px; left: 0px;">
+        <canvas class="runner-canvas" width="600" height="150" style="width: 600px; height: 150px;"></canvas>
+      </div>
 
   </body>
 </html>

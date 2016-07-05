@@ -11,6 +11,8 @@
  * @export
  */
 function Runner(outerContainerId, opt_config) {
+
+  console.log(outerContainerId);
   // Singleton
   if (Runner.instance_) {
     return Runner.instance_;
@@ -18,6 +20,7 @@ function Runner(outerContainerId, opt_config) {
   Runner.instance_ = this;
 
   this.outerContainerEl = document.querySelector(outerContainerId);
+
   this.containerEl = null;
   this.snackbarEl = null;
 
@@ -123,7 +126,6 @@ Runner.config = {
   SPEED: 6,
   SPEED_DROP_COEFFICIENT: 3
 };
-
 
 /**
  * Default dimensions.
@@ -405,6 +407,7 @@ Runner.prototype = {
   adjustDimensions: function() {
     clearInterval(this.resizeTimerId_);
     this.resizeTimerId_ = null;
+    console.log('adjustDimension: ',this.outerContainerEl);
 
     var boxStyles = window.getComputedStyle(this.outerContainerEl);
     var padding = Number(boxStyles.paddingLeft.substr(0,
